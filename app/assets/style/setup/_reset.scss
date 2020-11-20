@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $dark;
+  display: block;
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+code {
+  background: $secondary;
+  color: $primary;
+  line-height: 21px;
+  padding: 2px;
+}
+
+hr {
+  border-color: $secondary;
+}
+
+textarea {
+  resize: none;
+}
+
+ol,
+ul,
+dl {
+  list-style-type: none;
+  margin: 0;
+}
+
+.text {
+  &-xs {
+    font-size: 12px;
+  }
+  &-sm {
+    font-size: 14px;
+  }
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.material-icons {
+  vertical-align: bottom;
+}

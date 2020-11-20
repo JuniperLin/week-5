@@ -1,0 +1,233 @@
+---
+title: Answer - Assignment
+layout: ./app/layout.ejs
+engine: ejs
+current: assignment
+---
+
+<main class="main-area col-lg-9 col-md-8 col-12 p-7 h-auto d-flex flex-column position-absolute">
+    <div class="main-area__header d-flex align-items-center mb-7">
+        <h4 class="font-weight-bold">Assignment</h4>
+        <div class="btn-group ml-8">
+            <button type="button" class="btn font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Courses
+                <span class="material-icons text-primary">expand_more</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HTML</a>
+                <a class="dropdown-item" href="#">CSS</a>
+            </div>
+        </div>
+        <div class="d-flex ml-auto">
+            <a href="#" class="search">
+                <span class="material-icons">search</span>
+            </a>
+            <a href="#" class="notifications ml-4">
+                <span class="material-icons">notifications_active</span>
+            </a>
+        </div>
+    </div>
+    <!-- ---- -->
+    <div class="main-area__body">
+        <div class="d-flex align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn font-weight-bold px-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All (4)
+                    <span class="material-icons text-primary">expand_more</span>
+                </button>
+                <div class="dropdown-menu py-0 border-disabled">
+                    <a class="dropdown-item p-2 border-disabled" href="#">
+                        <h6 class="dropdown-header p-0">Emily Wang</h6>
+                        Please check this file...
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item p-2 border-disabled" href="#">
+                        <h6 class="dropdown-header p-0">David Xu</h6>
+                        My Homework
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item p-2 border-disabled" href="#">
+                        <h6 class="dropdown-header p-0">Tony Wei</h6>
+                        Have a problem with this...
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item p-2 border-disabled" href="#">
+                        <h6 class="dropdown-header p-0">Christina Lin</h6>
+                        Did I do it right?
+                    </a>
+                </div>
+            </div>
+            <p class="comments-num text-xs text-light text-right ml-auto">2 comments</p>
+        </div>
+        <div class="row">
+            <div class="all-assignments col-12 col-lg-5 mb-3 mb-lg-0">
+                <ul class="list-group">
+                    <li class="list-group-item border-disabled bg-secondary">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="text-xs">Chapter Assignment 2</p>
+                            <p class="text-xs text-right">4 hrs ago</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="font-weight-bold">Please check this file...</p>
+                            <p class="text-xs text-light text-right">Emily Wang</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-disabled">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="text-xs">Chapter Assignment 1</p>
+                            <p class="text-xs text-right">12 hrs ago</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="font-weight-bold">My Homework</p>
+                            <p class="text-xs text-light text-right">David Xu</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-disabled">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="text-xs">Final Assignment</p>
+                            <p class="text-xs text-right">18 hrs ago</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="font-weight-bold">Have a problem with this...</p>
+                            <p class="text-xs text-light text-right">Tony Wei</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="comments col-12 col-lg-7">
+                <div class="card text-center border-0">
+                    <div class="card-header bg-secondary d-flex align-items-center border border-disabled">
+                        <div class="text-left">
+                            <p class="text-xs">Chapter Assignment 2 / HTML&CSS</p>
+                            <p class="font-weight-bold">Please check this file for me, thanks!</p>
+                        </div>
+                        <button type="button" class="btn ml-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">more_vert</span>
+                        </button>
+                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-5px, 48px, 0px);">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                    </div>
+                    <ul class="card-body border border-disabled border-top-0 mb-3">
+                        <li class="media">
+                            <img class="avatar mr-2" src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg" class="mr-3" alt="...">
+                            <div class="media-body text-left">
+                                <h6 class="mb-1">Emily Wang</h6>
+                                <p class="text-xs text-light mb-3">10:38 AM (4 hours ago)</p>
+                                <p class="mb-3 text-sm"> 
+                                    Hi Teacher, the attached file is my homework of chapter 2.
+                                    And here comes a question: Why in the following code the
+                                    height of the <code>div</code> is bigger than the height of
+                                    the <code>img</code> ? There is a gap below the image, but
+                                    it doesn’t seems to be a padding/margin.<br>What is the
+                                    gap or extra space below image?
+                                </p>
+                                <div class="d-inline-block">
+                                    <a href="#" class="d-flex align-items-middle py-2 px-3 border rounded-sm bg-secondary mb-3" download>
+                                        <span class="material-icons mr-0 mr-sm-2">attach_file</span>
+                                        <p class="font-weight-bold d-none d-sm-block">HW-2-David.zip</p>
+                                    </a>
+                                </div>
+                                <div class="border-bottom border-disabled mb-3"></div>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <img class="avatar mr-2" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" class="mr-3" alt="...">
+                            <div class="media-body text-left">
+                                <h6 class="mb-1 d-flex align-items-center">Andy Chen (You) 
+                                    <a class="ml-auto edit-icon" href="#"><span class="material-icons">star_border</span></a>
+                                    <a class="ml-5 edit-icon" href="#"><span class="material-icons">create</span></a>
+                                </h6>
+                                <p class="text-xs text-light mb-3">13:24 AM (1 hour ago)</p>
+                                <p class="text-sm"> 
+                                    Hi David, by default, an image is rendered inline, 
+                                    like a letter so it sits on the same line that a, b, c 
+                                    and d sit on. There is space below that line for the 
+                                    descenders you find on letters like g, j, p and q. 
+                                    <br>
+                                    <br>
+                                    You can: 　
+                                    <br>
+                                    <br>
+                                    • adjust the <code>vertical-align</code> of the image to position it elsewhere (e.g. the <code>middle</code>)<br>
+                                    • change the <code>display</code> so it isn’t inline.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-footer bg-transparent border-0 p-0">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                              <a class="btn" href="#" role="button">
+                                <span class="material-icons align-bottom">navigate_before</span>
+                              </a>
+                              <a class="btn" href="#" role="button">
+                                <span class="material-icons align-bottom">navigate_next</span>
+                              </a>
+                            </div>
+                            <div class="replyEditShowBtn d-flex">
+                              <button class="btn btn-outline-primary px-6">Mark as read</button>
+                              <button class="btn btn-primary px-6 ml-3" type="button" data-toggle="collapse" data-target="#replyEditor" aria-expanded="false" aria-controls="replyEditor">
+                                Reply
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="replyEditor border bg-white collapse position-absolute" id="replyEditor">
+                        <ul class="textTools d-flex flex-wrap align-items-center px-4 py-3 border-bottom bg-secondary list-unstyled">
+                          <li class="textTools-item">
+                            <button class="btn dropdown-toggle d-flex align-items-center font-weight-bold p-0" type="button">
+                              Body Text
+                            </button>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">format_bold</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">format_italic</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">format_list_bulleted</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">format_list_numbered</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">insert_photo</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">insert_link</span>
+                            </a>
+                          </li>
+                          <li class="textTools-item">
+                            <a href="#" class="ml-4">
+                              <span class="material-icons">code</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <textarea class="w-100 border-0 px-4 py-3" name="replyMessage" id="replyMessage" rows="7" placeholder="Reply an answer…"></textarea>
+                        <div class="d-flex justify-content-end px-4 pb-3">
+                          <button class="btn btn-outline-primary px-7" type="button" data-toggle="collapse" data-target="#replyEditor" aria-expanded="true" aria-controls="replyEditor">
+                            Cancel
+                          </button>
+                          <button class="btn btn-primary px-7 ml-2">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

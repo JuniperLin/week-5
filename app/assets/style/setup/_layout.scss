@@ -1,0 +1,161 @@
+.control-panel {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 4;
+}
+
+.control-panel--show {
+  transform: translateX(0);
+  .arrow-box {
+    opacity: 1;
+  }
+}
+
+.fog {
+  background-color: black;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.fog.fog--show {
+  opacity: 0.5;
+  z-index: 3;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.back-stage-logo {
+  width: 150px;
+  height: 40px;
+  a {
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/week5/logo-ANSWER.svg);
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px;
+  }
+}
+
+.nav-link--active {
+  color: $primary;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    top: 50%;
+    left: -32px;
+    transform: translateY(-50%);
+    background-color: $primary;
+  }
+}
+
+.modal-img {
+  background-image: url(https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+.modal-btn {
+  .btn {
+    padding: 0;
+  }
+  .expandArrow {
+    .material-icons {
+      transition: all 0.3s ease;
+    }
+    &[aria-expanded="true"] .material-icons {
+      transform: rotate(-180deg);
+    }
+    &[aria-expanded="false"] .material-icons {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.arrow {
+  &-box {
+    width: 50px;
+    height: 100px;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+    background-color: $secondary;
+    border-radius: 0 50px 50px 0;
+    opacity: 0.5;
+  }
+  &-btn {
+    overflow: hidden;
+    padding: 0;
+    width: 50px;
+    height: 100px;
+    .material-icons {
+      animation: right 2s infinite;
+    }
+  }
+}
+
+.form-group {
+  label {
+    margin-bottom: 4px;
+  }
+}
+
+.select-dropdown {
+  position: relative;
+  .material-icons {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  select {
+    appearance: none;
+  }
+}
+
+.form-control {
+  height: 51px;
+}
+
+.checkbox-group {
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.main-area {
+  right: 0;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .control-panel {
+    transform: translateX(0);
+  }
+  .arrow-box {
+    display: none;
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+}
