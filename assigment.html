@@ -1,10 +1,80 @@
----
-title: Answer - Assignment
-layout: ./app/layout.ejs
-engine: ejs
-current: assignment
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Answer - Assignment</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <!-- RIGHT PANEL NAV -->
+      <nav class="control-panel bg-secondary col-lg-3 col-md-4 col-10 p-7 h-100 d-flex flex-column position-fixed">
+        <h1 class="back-stage-logo mb-7">
+          <a href="index.html">ANSWER</a>
+        </h1>
+        <ul class="nav flex-column control-panel__list font-weight-bold">
+          <li class="nav-item control-panel__list-item mb-4">
+            <a href="index.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">assessment</span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item control-panel__list-item mb-4">
+            <a href="question.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">question_answer</span>
+              Question
+            </a>
+          </li>
+          <li class="nav-item control-panel__list-item mb-4">
+            <a href="assigment.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">assignment</span>
+              Assignment
+            </a>
+          </li>
+          <li class="nav-item control-panel__list-item mb-4">
+            <a href="course.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">video_library</span>
+              Course
+            </a>
+          </li>
+          <li class="nav-item control-panel__list-item mb-4">
+            <a href="admin.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">group</span>
+              Admin
+            </a>
+          </li>
+          <li class="nav-item control-panel__list-item">
+            <a href="settings.html" class="nav-link d-flex align-items-center pl-0">
+              <span class="material-icons mr-3">settings</span>
+              Settings
+            </a>
+          </li>
+        </ul>
+        <div class="user-profile mt-auto" data-toggle="modal" data-target="#userModal">
+          <a class="d-flex align-items-center" href="#">
+            <img class="avatar" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" alt="">
+            <div class="user-profile__info ml-3">
+              <p class="font-weight-bold">Andy Chen</p>
+              <span class="text-light text-sm">andy0401@mail.com</span>
+            </div>
+          </a>  
+        </div>
+        <div class="arrow-box position-absolute">
+          <button type="button" class="navbar-toggler arrow-btn">
+            <span class="material-icons">chevron_right</span>
+          </button> 
+        </div>
+      </nav>
+      
+      
 <main class="main-area col-lg-9 col-md-8 col-12 p-7 h-auto d-flex flex-column position-absolute">
     <div class="main-area__header d-flex align-items-center mb-7">
         <h4 class="font-weight-bold">Assignment</h4>
@@ -231,3 +301,141 @@ current: assignment
     </div>
 </main>
 
+
+
+      <!-- USER MODAL -->
+      <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content container p-7">
+            <div class="modal-body row py-0">
+              <div class="modal-img col-4 p-0"></div>
+              <ul class="modal-body__content col-7 px-4">
+                <li class="mb-2">#1</li>
+                <li>Admin</li>
+                <h4 class="mb-2 font-weight-bold">Andy Chen</h4>
+                <li class="mb-3 text-light">andy0401@mail.com</li>
+                <li class="text-xs px-2 py-1 d-inline-block bg-secondary">Verified</li>
+              </ul>
+              <div class="modal-btn col-1 p-0 d-flex flex-column align-items-center">
+                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                  <span class="material-icons text-dark">clear</span>
+                </button>
+                <button type="button" class="expandArrow btn mt-auto collapsed" data-toggle="collapse" data-target="#viewFooter" aria-expanded="false" aria-controls="viewFooter">
+                  <span class="material-icons text-primary">expand_more</span>
+                </button>
+              </div>
+              <div class="modal-footer collapse ml-auto p-0 pt-7 border-0" id="viewFooter">
+                <button type="button" class="btn btn-outline-danger px-7">Sign-Out</button>
+                <button type="button" class="btn btn-primary px-7 ml-3" data-toggle="modal" data-target="#editModal">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDIT MODAL -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content py-7">
+            <div class="modal-header border-0 px-7 py-0 mb-7">
+              <h4 class="font-weight-bold">Edit Admin</h4>
+              <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                <span class="material-icons text-dark">clear</span>
+              </button>
+            </div>
+            <div class="modal-body px-7 py-0">
+              <form>
+                <h5 class="mb-3 font-weight-bold">Account</h5>
+                <div class="form-group mb-3">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control bg-secondary border-0 text-dark" id="name" value="Andy Chen">
+                </div>
+                <div class="form-group mb-4">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control bg-secondary border-0 text-dark" id="email" value="andy0401@mail.com">
+                </div>
+                <div class="border-bottom bg-secondary mb-4"></div>
+                <!-- ---- -->
+                <h5 class="mb-3 font-weight-bold">Verification</h5>
+                <div class="d-flex justify-content-between mb-3">
+                  <p class="font-weight-bold"><span class="material-icons text-primary mr-2">check_circle</span>Verified</p>
+                  <p>2020/4/12</p>
+                </div>
+                <button type="button" class="form-control btn btn-outline-disabled font-weight-bold col-12 mb-4" disabled>Send Verification Mail</button>
+                <div class="border-bottom bg-secondary mb-4"></div>
+                <!-- ---- -->
+                <h5 class="mb-3 font-weight-bold">Access Level</h5>
+                <div class="form-group select-dropdown mb-4">
+                  <span class="material-icons">expand_more</span>
+                  <select class="form-control">
+                    <option disabled selected>-- Choose Level --</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                  </select>
+                </div>
+                <div class="border-bottom bg-secondary mb-4"></div>
+                <!-- ---- -->
+                <h5 class="mb-3 font-weight-bold">Custom Access</h5>
+                <div class="checkbox-group d-flex align-items-center mb-3">
+                  <input type="checkbox" name="lecture" id="lecture">
+                  <label class="ml-2" for="lecture">Lecture</label>
+                </div>
+                <div class="checkbox-group d-flex align-items-center mb-3">
+                  <input type="checkbox" name="coupon" id="coupon">
+                  <label class="ml-2" for="coupon">Coupon</label>
+                </div>
+                <div class="checkbox-group d-flex align-items-center mb-3"> 
+                  <input type="checkbox" name="message" id="message">
+                  <label class="ml-2" for="message">Message</label>
+                </div>
+                <div class="checkbox-group d-flex align-items-center mb-3">
+                  <input type="checkbox" name="setting" id="setting">
+                  <label class="ml-2" for="setting">Setting</label>
+                </div>
+                <div class="checkbox-group d-flex align-items-center mb-4">
+                  <input type="checkbox" name="taskMenu" id="taskMenu">
+                  <label class="ml-2" for="taskMenu">Task Menu</label>
+                </div>
+                <div class="border-bottom bg-secondary mb-4"></div>
+                <!-- ---- -->
+                <h5 class="mb-3 font-weight-bold">Deactivate Account</h5>
+                <p class="text-danger mb-3"><span class="material-icons mr-2">warning</span>This cannot be undone!</p>
+                <button type="button" class="form-control btn btn-outline-danger font-weight-bold col-12 mb-3">Deactivate This Account</button>
+              </form>
+            </div>
+            <div class="modal-footer px-7 py-0 border-0">
+              <button type="button" class="btn btn-outline-primary px-5" data-dismiss="modal" aria-label="Close">Cancel</button>
+              <button type="button" class="btn btn-primary px-5 ml-3">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOG -->
+      <div class="fog"></div>
+
+    </div>
+  </div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
