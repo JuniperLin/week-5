@@ -3,13 +3,12 @@ $(document).ready(function () {
     $('.nav-item').find('a').each(function () {
       $(this).toggleClass('nav-link--active', $(this).attr('href') == url.split('/week-5/')[1]);
     });
-  });
-
-  $(".arrow-btn").click(function (e) { 
-    e.preventDefault();
-    $(".control-panel").toggleClass("control-panel--show");
-    $(".fog").toggleClass("fog--show");
-  });
+  
+    $(".arrow-btn").click(function (e) { 
+      e.preventDefault();
+      $(".control-panel").toggleClass("control-panel--show");
+      $(".fog").toggleClass("fog--show");
+    });
 });
 
 

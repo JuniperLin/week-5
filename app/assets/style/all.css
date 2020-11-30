@@ -13184,6 +13184,10 @@ dl {
   z-index: 4;
 }
 
+.control-panel .user-profile {
+  bottom: 32px;
+}
+
 .control-panel--show {
   -webkit-transform: translateX(0);
           transform: translateX(0);
