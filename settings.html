@@ -16,7 +16,7 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
       <!-- RIGHT PANEL NAV -->
-      <nav class="control-panel bg-secondary col-lg-3 col-md-4 col-10 p-7 h-100 d-flex flex-column position-fixed">
+      <nav class="control-panel bg-secondary col-lg-3 col-md-4 col-10 p-7 h-100 position-fixed">
         <h1 class="back-stage-logo mb-7">
           <a href="index.html">ANSWER</a>
         </h1>
@@ -58,11 +58,11 @@
             </a>
           </li>
         </ul>
-        <div class="user-profile mt-auto" data-toggle="modal" data-target="#userModal">
+        <div class="user-profile position-absolute" data-toggle="modal" data-target="#userModal">
           <a class="d-flex align-items-center" href="#">
             <img class="avatar" src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg" alt="">
             <div class="user-profile__info ml-3">
-              <p class="font-weight-bold">Andy Chen</p>
+              <h6 class="font-weight-bold">Andy Chen</h6>
               <span class="text-light text-sm">andy0401@mail.com</span>
             </div>
           </a>  
@@ -100,7 +100,9 @@
               <ul class="modal-body__content col-7 px-4">
                 <li class="mb-2">#1</li>
                 <li>Admin</li>
-                <h4 class="mb-2 font-weight-bold">Andy Chen</h4>
+                <li>
+                  <h4 class="mb-2 font-weight-bold">Andy Chen</h4>
+                </li>
                 <li class="mb-3 text-light">andy0401@mail.com</li>
                 <li class="text-xs px-2 py-1 d-inline-block bg-secondary">Verified</li>
               </ul>
@@ -165,24 +167,24 @@
                 <!-- ---- -->
                 <h5 class="mb-3 font-weight-bold">Custom Access</h5>
                 <div class="checkbox-group d-flex align-items-center mb-3">
-                  <input type="checkbox" name="lecture" id="lecture">
-                  <label class="ml-2" for="lecture">Lecture</label>
+                  <input type="checkbox" name="lecture" id="userLecture">
+                  <label class="ml-2" for="userLecture">Lecture</label>
                 </div>
                 <div class="checkbox-group d-flex align-items-center mb-3">
-                  <input type="checkbox" name="coupon" id="coupon">
-                  <label class="ml-2" for="coupon">Coupon</label>
+                  <input type="checkbox" name="coupon" id="userCoupon">
+                  <label class="ml-2" for="userCoupon">Coupon</label>
                 </div>
                 <div class="checkbox-group d-flex align-items-center mb-3"> 
-                  <input type="checkbox" name="message" id="message">
-                  <label class="ml-2" for="message">Message</label>
+                  <input type="checkbox" name="message" id="userMessage">
+                  <label class="ml-2" for="userMessage">Message</label>
                 </div>
                 <div class="checkbox-group d-flex align-items-center mb-3">
-                  <input type="checkbox" name="setting" id="setting">
-                  <label class="ml-2" for="setting">Setting</label>
+                  <input type="checkbox" name="setting" id="userSetting">
+                  <label class="ml-2" for="userSetting">Setting</label>
                 </div>
                 <div class="checkbox-group d-flex align-items-center mb-4">
-                  <input type="checkbox" name="taskMenu" id="taskMenu">
-                  <label class="ml-2" for="taskMenu">Task Menu</label>
+                  <input type="checkbox" name="taskMenu" id="userTaskMenu">
+                  <label class="ml-2" for="userTaskMenu">Task Menu</label>
                 </div>
                 <div class="border-bottom bg-secondary mb-4"></div>
                 <!-- ---- -->
